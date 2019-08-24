@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        background: rosybrown;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    <script>
+    $(document).ready(function(){
+$("button").click(function(){
+    $("div").animate({ left:'250',
+opacity:'0.5',
+height:'150px',
+width:'150px',
+})
+// $("div").animate({top:'300'})
+})
+    })
+    </script>
+</head>
+
+<body>
+    <button>ok</button>
+<div></div>
+</body>
+
+</html>

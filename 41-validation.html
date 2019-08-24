@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        main {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        input{
+            width: 200px;
+
+        }
+        button{
+            outline: 0;
+            border:0;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-top: 5px;
+        }
+        button:hover{
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        enter a number: <br>
+        <input type="number" name="number" id="number" min="100" max="300" required><br>
+        <button onclick="myfunction()">ok</button>
+        <p id="para"></p>
+    </main>
+    <script>
+        let number,para,txt="";
+        number=document.getElementById("number");
+        para=document.getElementById("para");
+    function myfunction(){
+if (!number.checkValidity()) txt=number.validationMessage;
+else txt="ok!";
+para.innerText=txt;
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    please enter a number <br>
+    <input type="number" name="number" id="number" min="100" max="200"><br>
+    <button onclick="validation()" >ok</button>
+    <p id="para"></p>
+
+<script>
+    let number=document.getElementById("number");
+    let para=document.querySelector("p");
+    let txt="";
+function validation(){
+if (number.validity.rangeUnderflow) txt="value too low";
+else if(number.validity.rangeOverflow)txt="value too high";
+else txt="it's <b>ok<b/>";
+
+
+para.innerHTML=txt;
+    
+}
+</script>
+</body>
+</html>

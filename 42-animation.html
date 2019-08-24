@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #container{
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: #f1f1f1;
+    }
+    #animate{
+width: 50px;
+height: 50px;
+position: absolute;
+background: #ccc;
+
+    }
+    </style>
+</head>
+<body>
+    <button onclick="myfunction()">ok</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <script>
+    function myfunction(){
+ let animate=document.getElementById("animate");
+        let pos=0, id;
+        id=setInterval(frame, 5);
+        function frame(){
+            if(pos==350){
+                clearInterval(id)
+        }
+            else{
+                pos++;
+                animate.style.top=pos+"px";
+                animate.style.left=pos+"px";
+
+            }
+         
+        }
+    }
+    </script>
+</body>
+</html>
